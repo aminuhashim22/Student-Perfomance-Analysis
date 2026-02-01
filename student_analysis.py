@@ -11,7 +11,7 @@ st.write(df.describe())
 if st.button("Show Dataset"):
     st.dataframe(df)
 
-min_Age = st.slider("Select Minimum Age", 0, 100, 50)
+min_Age = st.slider("Select Minimum Age", 0, 100, 20)
 filtered_df = df[df["Age"] >= min_Age]
 st.dataframe(filtered_df)
 
