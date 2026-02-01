@@ -22,16 +22,17 @@ if uploaded_file:
     df = pd.read_csv(uploaded_file)
     st.dataframe(df)
 
+st.write("Score Distribution")
 st.bar_chart(df["Score"].value_counts())
 
 st.line_chart(df["Score"])
 
 import matplotlib.pyplot as plt
 
+st.write("Score Distribution")
 fig, ax = plt.subplots()
 ax.hist(df["Score"])
 st.pyplot(fig)
-
 
 st.sidebar.title("Navigation")
 option = st.sidebar.selectbox(
